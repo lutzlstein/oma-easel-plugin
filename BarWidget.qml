@@ -47,7 +47,7 @@ BarWidget {
 
   function activate() {
     if (!root.installed) {
-      Quickshell.execDetached(["omarchy-launch-floating-terminal-with-presentation", "omarchy pkg aur add oma-easel"])
+      Quickshell.execDetached(["omarchy-launch-floating-terminal-with-presentation", "sudo pacman -U https://github.com/lutzlstein/oma-easel/releases/latest/download/oma-easel-x86_64.pkg.tar.zst"])
       return
     }
     if (root.running)
@@ -104,7 +104,7 @@ BarWidget {
     active: root.generating > 0
     dimmed: !root.installed
     tooltipText: !root.installed
-      ? "Oma Easel isn't installed. Click to install it (omarchy pkg aur add oma-easel)."
+      ? "Oma Easel isn't installed. Click to install the latest release."
       : root.generating > 0
         ? "Oma Easel · generating " + (root.total - root.generating) + " of " + root.total + (root.themeName ? " for " + root.themeName : "")
         : root.running ? "Oma Easel is open. Click to switch to it." : "Open Oma Easel"
