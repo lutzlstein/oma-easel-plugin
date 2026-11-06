@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.lutzlstein.oma-easel",
+  "name": "Oma Easel",
+  "version": "0.1.0",
+  "author": "lutzlstein",
+  "license": "MIT",
+  "description": "Bar companion for the Oma Easel app: open it, see what's generating, or install it.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Oma Easel",
+    "description": "Opens Oma Easel and shows how many theme backgrounds are generating.",
+    "category": "Other",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {},
+    "schema": []
+  }
+}
