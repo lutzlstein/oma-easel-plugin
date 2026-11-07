@@ -2,15 +2,17 @@
   "schemaVersion": 1,
   "id": "io.github.lutzlstein.oma-easel",
   "name": "Oma Easel",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "lutzlstein",
   "license": "MIT",
-  "description": "Bar companion for the Oma Easel app: open it, see what's generating, or install it.",
+  "description": "Bar companion for the Oma Easel app, and a background renderer that shows each screen its own version of a background.",
   "kinds": [
-    "bar-widget"
+    "bar-widget",
+    "service"
   ],
   "entryPoints": {
-    "barWidget": "BarWidget.qml"
+    "barWidget": "BarWidget.qml",
+    "service": "Background.qml"
   },
   "barWidget": {
     "displayName": "Oma Easel",
@@ -20,5 +22,8 @@
     "defaultSection": "right",
     "defaults": {},
     "schema": []
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.background"
   }
 }
